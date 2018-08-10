@@ -1,4 +1,4 @@
-This is the repository of the Alpha Blog app of the Rails JavaScript Development course.
+Udemy course - Alpha Blog app of the Rails JavaScript Development course.
 
 - This was built using Ruby on Rails
 - for Cloud 9 IDE users, Yarn is not installed but npm is. So to install yarn:
