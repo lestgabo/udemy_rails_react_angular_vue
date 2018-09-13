@@ -8,8 +8,8 @@ class User < ApplicationRecord
             uniqueness: { case_sensitive: false },
             format: { with: VALID_EMAIL_REGEX }
   # VALID_COLOR_REGEX = /[#][a-fA-F0-9]{3,6}/  
-  VALID_COLOR_REGEX = /^#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$/i
-  validates :color, presence: true, length: { minimum: 4, maximum: 7 }, 
+  VALID_COLOR_REGEX = /\A#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})\Z/i
+  validates :color, presence: true, 
             format: { with: VALID_COLOR_REGEX }
   has_secure_password
 end
