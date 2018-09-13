@@ -7,5 +7,8 @@ class User < ApplicationRecord
   validates :email, presence: true, length: { maximum: 105 },
             uniqueness: { case_sensitive: false },
             format: { with: VALID_EMAIL_REGEX }
+  VALID_COLOR_REGEX = /[#][a-fA-F0-9]{3,6}/
+  validates :color, presence: true, length: { minimum: 4, maximum: 7 }, 
+            format: { with: VALID_COLOR_REGEX }
   has_secure_password
 end
